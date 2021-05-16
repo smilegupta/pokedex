@@ -1,6 +1,6 @@
 name: pokedex
 
-pokedeck:
+pokedex:
   component: "@serverless/website"
   region: ${env.REGION}
   inputs:
