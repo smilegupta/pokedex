@@ -1,6 +1,6 @@
 name: pokedex
 
-image-dock:
+pokedex:
   component: "@serverless/website"
   region: ${env.REGION}
   inputs:
