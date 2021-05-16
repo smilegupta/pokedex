@@ -32,5 +32,5 @@ jobs:
         if: github.ref == 'refs/heads/master'
         run: serverless --verbose
         env: 
-          BUCKET_NAME: pokedex-app
+          BUCKET_NAME: pokedeck-app
           REGION: ap-southeast-1
