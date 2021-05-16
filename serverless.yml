@@ -1,10 +1,10 @@
-name: pokedex
+name: pokedeck
 
-pokedex:
+pokedeck:
   component: "@serverless/website"
   region: ${env.REGION}
   inputs:
     code:
       src: ./build
     bucketName: ${env.BUCKET_NAME}
-    domain: pokedex.smilegupta.tech
+    domain: pokedeck.smilegupta.tech
