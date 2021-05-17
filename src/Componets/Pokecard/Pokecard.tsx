@@ -1,5 +1,7 @@
 import "./Pokecard.css"
 
+
+
 const Pokecard = (props: any) => {
     return (
         <div className="pokecard">
