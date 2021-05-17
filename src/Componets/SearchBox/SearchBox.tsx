@@ -1,11 +1,21 @@
-import "./Searchbox.css"
+import "./Searchbox.css";
 
-const SearchBox = () => {
-    return (
-        <div>
-            <input className="search" type="search" placeholder="Search Pokemon" />
-        </div>
-    )
+interface SearchboxProps {
+    onInputChange: (inputValue: string) => void;
 }
 
-export default SearchBox
+const Searchbox = ({ onInputChange }: SearchboxProps) => {
+    return (
+        <input
+            className="search"
+            onChange={(e) => {
+                console.log(e.target.value);
+                onInputChange(e.target.value);
+            }}
+            type="search"
+            placeholder="Search Pokemons"
+        />
+    );
+};
+
+export default Searchbox;
