@@ -10,7 +10,7 @@ const Pokecard = ({ name, spriteUrl, onPokemonClick }: PokecardProps) => {
     return (
         <div className="pokecard" onClick = {() => onPokemonClick(name)}>
             <img className="pokemon-sprite" alt="pokemon" src={spriteUrl} />
-            <p>
+            <p className="text-capitalise">
                 {name}
             </p>
         </div>

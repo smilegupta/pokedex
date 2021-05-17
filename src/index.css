@@ -14,3 +14,7 @@ h1{
   font-size: 57px;
   font-family: 'Press Start 2P', cursive;
 }
+
+.text-capitalise{
+  text-transform: capitalize;
+}

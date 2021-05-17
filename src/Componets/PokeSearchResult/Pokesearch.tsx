@@ -5,7 +5,7 @@ interface PokesearchProps {
     selectedPokemon: PokemonSchema | undefined
 }
 const Pokesearch = ({ selectedPokemon }: PokesearchProps) => {
-    const { name, id, height, weight, base_experience, sprites } =
+    const { name, height, weight, base_experience, sprites } =
         selectedPokemon || {};
     return (
         <div className="poke-result-card">
@@ -16,8 +16,7 @@ const Pokesearch = ({ selectedPokemon }: PokesearchProps) => {
                         alt="pokemon"
                         src={sprites?.animated || sprites?.normal}
                     />
-                    <p>Name: {name}</p>
-                    <p>Id: {id}</p>
+                    <p className="text-capitalise">Name: {name}</p>
                     <p>Height: {height}</p>
                     <p>Weight: {weight}</p>
                     <p>Base Exp: {base_experience}</p>
