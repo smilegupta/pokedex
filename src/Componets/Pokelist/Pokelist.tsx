@@ -14,7 +14,7 @@ const Pokelist = ({ searchedPokemons }: PokelistProps) => {
                     return (
                         <Pokecard key={id}
                             name={name}
-                            spriteUrl={sprites === undefined ? null : sprites.normal} />
+                            spriteUrl={sprites === undefined ? undefined : sprites.normal} />
                     )
                 })
             }
