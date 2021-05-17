@@ -75,12 +75,22 @@ class App extends React.Component<any, AppState> {
     })
   }
 
+  handleClick = (pokemonName: string) => {
+    const { allPokemons } = this.state;
+    const selectedPokemon = allPokemons.find(
+        (pokemon: PokemonSchema) => pokemon.name === pokemonName
+    );
+    this.setState({ selectedPokemon });
+};
+
   render() {
     return (
       <div className="App">
         <h1> Pokedex </h1>
         <Pokedex searchedPokemons={this.state.searchedPokemons}
         onInputChange = {this.handleInputChange}
+        onPokemonClick={this.handleClick}
+        selectedPokemon={this.state.selectedPokemon}
         />
       </div>
     );

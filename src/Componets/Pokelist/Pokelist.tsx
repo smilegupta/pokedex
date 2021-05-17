@@ -4,17 +4,21 @@ import "./Pokelist.css"
 
 interface PokelistProps {
     searchedPokemons: PokemonSchema[]
+    onPokemonClick: (pokemonName: string) => void
 }
 
-const Pokelist = ({ searchedPokemons }: PokelistProps) => {
+const Pokelist = ({ searchedPokemons, onPokemonClick }: PokelistProps) => {
     return (
         <div className="pokelist">
             {
-                searchedPokemons.map(({ id, name, sprites }) => {
+                searchedPokemons.map(({ name, sprites }, idx) => {
                     return (
-                        <Pokecard key={id}
-                            name={name}
-                            spriteUrl={sprites === undefined ? undefined : sprites.normal} />
+                       name && (
+                        <Pokecard key={idx}
+                        onPokemonClick={onPokemonClick}
+                        name={name}
+                        spriteUrl={sprites === undefined ? undefined : sprites.normal} />
+                       )
                     )
                 })
             }

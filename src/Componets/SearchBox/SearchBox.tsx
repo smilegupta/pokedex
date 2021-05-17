@@ -9,7 +9,6 @@ const Searchbox = ({ onInputChange }: SearchboxProps) => {
         <input
             className="search"
             onChange={(e) => {
-                console.log(e.target.value);
                 onInputChange(e.target.value);
             }}
             type="search"
